@@ -11,7 +11,7 @@ export const connectToDB = async () => {
         console.log('Database is connected')
     } else{
         try{
-            await mongoose.connect(process.env.MONGO_STRING)
+            await mongoose.connect(process.env.MONGO_STRING, {dbName: "Users"})
         }
         catch(error){
             console.log(error)
