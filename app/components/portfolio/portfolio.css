@@ -1,0 +1,37 @@
+.portfolio{
+    background-color: var(--light-blue);
+    margin-top: 100px;
+    padding: 40px 0;
+}
+
+.portfolio_title h3{
+    color: white;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 35px;
+}
+
+.portfolio_items{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+}
+
+.portfolio_item{
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio_item:hover{
+    scale: .8;
+}
+
+.portfolio_item img{
+    width: 200px;
+    height: 200px;
+    user-select: none;
+}

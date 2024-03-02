@@ -1,0 +1,41 @@
+.service_container{
+    margin: 50px 0;
+}
+
+.service{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+.service img{
+    width: 200px;
+    height: 200px;
+    margin-right: 40px;
+}
+
+.service_detail p:first-child{
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.buy_service_btn{
+    background: var(--gradient-blue);
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    margin: 10px 0;
+    border: 1px solid white;
+}
+
+.buy_service_btn:hover{
+    background: none;
+    border: 1px solid var(--light-blue);
+    color: var(--light-blue);
+}
+
+.service_detail p:last-child{
+    max-width: 1000px;
+}

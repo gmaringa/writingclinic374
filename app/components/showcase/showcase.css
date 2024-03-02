@@ -1,0 +1,61 @@
+.showcase_index{
+    height: 80vh;
+    background-color: var(--light-blue);
+    color: white;
+    background-image: url("../../assets/bannerwriting.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.showcase_index_overlay{
+    position: absolute;
+    top: 0;
+    opacity: .5;
+    background: var(--light-blue);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.showcase_index_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.showcase_index .showcase_index_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+}
+
+.showcase_index .showcase_index_details h1{
+    font-size: 60px;
+    margin-bottom: 2rem;
+}
+
+.showcase_index .showcase_index_details p{
+    font-size: 25px;
+    max-width: 600px;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.showcase_index .showcase_index_details a{
+    display: inline-block;
+    background: var(--gradient-blue);
+    border-radius: 30px;
+    padding: .8rem 2.5rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.showcase_index .showcase_index_details a:hover{
+    color: var(--light-gray);
+}

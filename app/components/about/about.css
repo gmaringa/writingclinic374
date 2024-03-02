@@ -1,0 +1,33 @@
+.about{
+    margin-top: 100px;
+}
+
+.about h1{
+    margin-bottom: 20px;
+    color: var(--dark-gray);
+}
+
+.about span{
+    color: var(--light-blue);
+}
+
+.about_left p{
+    color: var(--light-gray);
+    max-width: 600px;
+    line-height: 3rem;
+}
+
+.about_container{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.about_right{
+    display: flex;
+    flex-direction: column;
+}
+
+.about_right a{
+    color: var(--dark-blue);
+}

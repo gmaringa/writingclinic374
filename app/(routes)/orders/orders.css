@@ -1,0 +1,18 @@
+.orders_page{
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 0;
+}
+
+.orders_page button, .orders_page a{
+    display: inline-block;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    margin: 20px 0;
+}

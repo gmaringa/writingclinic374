@@ -1,0 +1,93 @@
+.order_container{
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+}
+
+.order_title{
+    color: var(--dark-gray);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.order_img{
+    margin: 20px 0;
+    width: 100%;
+}
+
+.order_description{
+    margin: 20px 0;
+}
+
+.order_portfolio p{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.order_about_desc{
+    max-width: 700px;
+}
+
+.order_right{
+    border: 1px solid #c5c6c9;
+    padding: 20px;
+    margin-left: 50px;
+    height: 100%;
+}
+
+.order_right_header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.order_right_form input, .order_right_form textarea{
+    display: block;
+    padding: 20px;
+    margin: 15px 0;
+    border: 1px solid #E6E6E6;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.word_count_field{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.word_count_field p{
+    margin-left: 10px;
+}
+
+.order_submit_btn{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.order_submit_btn:hover{
+    border: 1px solid black;
+    color: black;
+    background: none;
+    transition: all .3s ease-in-out;
+}
+
+.order_right_more{
+    background: var(--gradient-blue);
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+}
+
+.order_right_more:hover{
+    background: none;
+    border: 1px solid var(--light-blue);
+    color: var(--light-blue);
+}

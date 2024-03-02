@@ -1,0 +1,39 @@
+.testimonials{
+    margin: 20px 0;
+}
+
+.testimonials_title{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.testimonials_title p{
+    color: var(--light-gray);
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+.review{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.review_container{
+    margin: 20px 0;
+}
+
+.review img{
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.review_start h3{
+    color: var(--light-gray);
+}
+
+.review_details{
+    margin-top: 20px;
+    max-width: 1200px;
+}
