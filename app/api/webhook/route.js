@@ -52,7 +52,7 @@ export async function POST(req) {
   const eventType = evt?.type;
 
   if (eventType === "user.created" || eventType === "user.updated") {
-    const { id, first_name, last_name, image_url, email_addresses, username } =
+    const { id, first_name, last_name, profile_image_url, email_addresses } =
       evt?.data;
 
     try {
@@ -60,9 +60,8 @@ export async function POST(req) {
         id,
         first_name,
         last_name,
-        image_url,
+        profile_image_url,
         email_addresses,
-        username
       );
 
       return new Response("User is created or updated", {
