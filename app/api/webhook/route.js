@@ -2,50 +2,27 @@ import { Webhook } from "svix";
 import { headers } from "next/headers";
 import { createOrUpdateUser } from "../../../lib/controllers/user.controller.js";
 
-export async function POST(req) {
-  // You can find this in the Clerk Dashboard -> Webhooks -> choose the webhook
-  const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
+import { NextResponse } from "next/server"
+import { Webhook } from "svix"
 
-  if (!WEBHOOK_SECRET) {
-    throw new Error(
-      "Please add WEBHOOK_SECRET from Clerk Dashboard to .env or .env.local"
-    );
+const webhookSecret = process.env.WEBHOOK_SECRET || ""
+
+async function handler(request) {
+  const payload = await request.json()
+  const headersList = headers()
+  const heads = {
+    "svix-id": headersList.get("svix-id"),
+    "svix-timestamp": headersList.get("svix-timestamp"),
+    "svix-signature": headersList.get("svix-signature")
   }
+  const wh = new Webhook(webhookSecret)
+  let evt = null
 
-  // Get the headers
-  const headerPayload = headers();
-  const svix_id = headerPayload.get("svix-id");
-  const svix_timestamp = headerPayload.get("svix-timestamp");
-  const svix_signature = headerPayload.get("svix-signature");
-
-  // If there are no headers, error out
-  if (!svix_id || !svix_timestamp || !svix_signature) {
-    return new Response("Error occured -- no svix headers", {
-      status: 400,
-    });
-  }
-
-  // Get the body
-  const payload = await req.json();
-  const body = JSON.stringify(payload);
-
-  // Create a new Svix instance with your secret.
-  const wh = new Webhook(WEBHOOK_SECRET);
-
-  let evt;
-
-  // Verify the payload with the headers
   try {
-    evt = wh.verify(body, {
-      "svix-id": svix_id,
-      "svix-timestamp": svix_timestamp,
-      "svix-signature": svix_signature,
-    });
+    evt = wh.verify(JSON.stringify(payload), heads)
   } catch (err) {
-    console.error("Error verifying webhook:", err);
-    return new Response("Error occured", {
-      status: 400,
-    });
+    console.error(err.message)
+    return NextResponse.json({}, { status: 400 })
   }
 
   // Handle the event
@@ -92,3 +69,7 @@ export async function POST(req) {
     }
   }
 }
+
+export const GET = handler
+export const POST = handler
+export const PUT = handler
