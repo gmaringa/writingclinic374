@@ -8,12 +8,13 @@
 }
 
 .faqs .faqs_header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
     color: var(--light-gray);
     margin-bottom: 40px;
+}
+
+.faqs_header_desc{
+    display: flex;
+    justify-content: space-between;
 }
 
 .faqs_container h3{

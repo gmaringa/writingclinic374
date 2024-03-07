@@ -11,8 +11,8 @@ export default function Orders() {
         {
           user.isSignedIn ? (
             <div className='orders_page'>
-                <p>You have 0 Orders</p>
-                <Link href='/orders/new'>Order now</Link>
+                <p>You have made 0 Orders</p>
+                <Link href='/orders/terms'>Order now</Link>
             </div>
           ) : (
             <div className='orders_page'>

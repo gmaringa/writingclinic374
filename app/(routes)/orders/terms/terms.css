@@ -1,0 +1,49 @@
+.conditions{
+    background: #E6E6E6;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.conditions h1{
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+
+.term{
+    margin: 10px 0;
+}
+
+.term h3{
+    color: var(--dark-gray);
+}
+
+.term p{
+    color: var(--light-gray);
+}
+
+.order_btn{
+    display: inline-block;
+    background-color: black;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.terms_bottom{
+    display: flex;
+    gap: 10px;
+}
+
+.order_btn_disabled_link{
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: #ccc;
+    opacity: 0.7;
+    user-select: none;
+}

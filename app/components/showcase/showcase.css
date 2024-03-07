@@ -59,3 +59,17 @@
 .showcase_index .showcase_index_details a:hover{
     color: var(--light-gray);
 }
+
+.showcase_about{
+    background: var(--light-blue);
+    color: white;
+    font-size: 50px;
+}
+
+.showcase_about_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Tahoma;
+    height: 100%;
+}

@@ -1,10 +1,8 @@
 "use client"
 import { usePathname } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import './showcase.css'
-import MyImage from '../../assets/bannerwriting.jpeg'
 
 export default function Showcase() {
     const pathname = usePathname()
@@ -28,7 +26,13 @@ export default function Showcase() {
                 )
             }
             {
-                pathname === "/home" && (<></>)
+                pathname === "/about" && (<>
+                        <div className="showcase_about">
+                            <div className="container showcase_about_flex">
+                                <h1>WHO WE ARE</h1>
+                            </div>
+                        </div>
+                </>)
             }
             {
                 pathname === "/services" && (<></>)
