@@ -64,6 +64,7 @@
     background: var(--light-blue);
     color: white;
     font-size: 50px;
+    height: 350px;
 }
 
 .showcase_about_flex{
