@@ -13,14 +13,14 @@ export default function TermsAndConditions() {
       <div className="container">
         <div className="conditions">
           <h1>Familiarize yourself with our terms and conditions, covering payment details, delivery timelines, and other important policies.</h1>
-          {Conditions.query.map((term) => (
+          {/* {Conditions.query.map((term) => (
             <ul key={term.id}>
               <li className="term">
                 <h3>{term.question}</h3>
                 <p>{term.answer}</p>
               </li>
             </ul>
-          ))}
+          ))} */}
           <div className="terms_bottom">
             <input type="checkbox" name="terms" id="terms" onChange={() => setIsActive(!isActive)} />
             <p>
